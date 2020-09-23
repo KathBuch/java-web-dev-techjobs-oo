@@ -1,4 +1,5 @@
 package org.launchcode.techjobs_oo.Tests;
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -17,20 +18,32 @@ public void createJobObject(){
 }
 @Test
 public void testSettingJobId(){
-assertEquals(test_job.getId(), 1);
- assertEquals(test_job2.getId(), 2);
+assertEquals(test_job.getId(), test_job2.getId());
+
 }
 
 
 @Test
 public void testJobConstructorSetsAllFields(){
- Job test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+ test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
  assertTrue(test_job instanceof Job);
 }
 @Test
 public void testJobsForEquality(){
+ test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+ System.out.println(test_job.getId() + " " + test_job2.getId());
+ test_job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+ assertEquals(test_job, test_job2);
+
 
 }
+@Test
+ public void testString() {
+ test_job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+ test_job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+ System.out.println(test_job.toString());
+ System.out.println(test_job2.toString());
+ }
 }
 
 

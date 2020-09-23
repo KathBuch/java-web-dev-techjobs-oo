@@ -20,7 +20,7 @@ public class Job {
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency){
-        new Job();
+        this();
         this.name = name;
         this.employer = employer;
         this.location = location;
@@ -29,6 +29,38 @@ public class Job {
 
     }
 
+    @Override
+    public String toString() {
+        if(name == null) {
+            name = "Data not available";
+        }
+        String employerPlaceholder = employer.toString();
+        if(employerPlaceholder == null) {
+            employerPlaceholder = "Data not available";
+        }
+
+        String locationPlaceholder = location.toString();
+        if(locationPlaceholder == null) {
+            locationPlaceholder = "Data not available";
+        }
+        String positionPlaceholder = positionType.toString();
+        if(positionPlaceholder == null) {
+           positionPlaceholder = "Data not available";
+        }
+
+        String corePlaceholder = coreCompetency.toString();
+        if(corePlaceholder == null) {
+            corePlaceholder = "Data not available";
+        }
+        return
+                "Id:" + id + "\n" +
+                "Name:" + name + "\n" +
+                "Employer: " + employerPlaceholder + "\n" +
+                "Location:" + location + "\n" +
+                "Position Type:" + positionType + "\n" +
+                "Core Competency:" + coreCompetency + "\n"
+                ;
+    }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
@@ -104,4 +136,6 @@ public class Job {
     public int getId() {
         return id;
     }
+
+
 }
