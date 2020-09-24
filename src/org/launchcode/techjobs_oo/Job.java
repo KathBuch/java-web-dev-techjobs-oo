@@ -53,12 +53,12 @@ public class Job {
             corePlaceholder = "Data not available";
         }
         return
-                "Id:" + id + "\n" +
-                "Name:" + name + "\n" +
+                "Id: " + id + "\n" +
+                "Name: " + name + "\n" +
                 "Employer: " + employerPlaceholder + "\n" +
-                "Location:" + location + "\n" +
-                "Position Type:" + positionType + "\n" +
-                "Core Competency:" + coreCompetency + "\n"
+                "Location: " + location + "\n" +
+                "Position Type: " + positionType + "\n" +
+                "Core Competency: " + coreCompetency + "\n"
                 ;
     }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
