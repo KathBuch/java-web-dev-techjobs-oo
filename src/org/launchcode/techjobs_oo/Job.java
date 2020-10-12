@@ -35,30 +35,30 @@ public class Job {
             name = "Data not available";
         }
         String employerPlaceholder = employer.toString();
-        if(employerPlaceholder == null) {
+        if(employerPlaceholder == null || employerPlaceholder == ""  ) {
             employerPlaceholder = "Data not available";
         }
 
         String locationPlaceholder = location.toString();
-        if(locationPlaceholder == null) {
+        if(locationPlaceholder == null || locationPlaceholder == "") {
             locationPlaceholder = "Data not available";
         }
         String positionPlaceholder = positionType.toString();
-        if(positionPlaceholder == null) {
+        if(positionPlaceholder == null || positionPlaceholder == "") {
            positionPlaceholder = "Data not available";
         }
 
         String corePlaceholder = coreCompetency.toString();
-        if(corePlaceholder == null) {
+        if(corePlaceholder == null || corePlaceholder == "") {
             corePlaceholder = "Data not available";
         }
         return
                 "Id: " + id + "\n" +
                 "Name: " + name + "\n" +
                 "Employer: " + employerPlaceholder + "\n" +
-                "Location: " + location + "\n" +
-                "Position Type: " + positionType + "\n" +
-                "Core Competency: " + coreCompetency + "\n"
+                "Location: " + locationPlaceholder + "\n" +
+                "Position Type: " + positionPlaceholder + "\n" +
+                "Core Competency: " + corePlaceholder + "\n"
                 ;
     }
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
